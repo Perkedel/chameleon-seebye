@@ -130,7 +130,7 @@ def main():
             rgb = calc.calc(*itertools.chain(
                 (ui.get_pixel(root, x, y),), rgbs))
 
-            if e.type == X.ButtonPress:
+            if e.type == X.ButtonPress and e.detail == X.MOUSE_BUTTON_LEFT:
                 print(Params.format.format(*rgb))
                 if next(count) + 1 >= Params.count:
                     break
